@@ -1,0 +1,134 @@
+<html>
+<head>
+    <title>Jouer aux échecs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="info">
+        <div id="title"><h1>Jeu d'échecs</h1></div>
+        <div id="description">Il s'agit d'un jeu d'échecs en ligne gratuit et jouable en solo ou bien à 2 joueurs. Pour jouer il suffit de cliquer sur la pièce à bouger puis sur l'endroit où on souhaite la déplacer. Les blancs jouent les premiers !</div>
+        <div id="cadence">
+            <select id="cad" name="time">
+                <option value="1">1 minute</option>
+                <option value="2">2 minutes</option>
+                <option value="3">3 minutes</option>
+                <option selected="selected" value="5">5 minutes</option>
+                <option value="10">10 minutes</option>
+                <option value="15">15 minutes</option>
+                <option value="30">30 minutes</option>
+                <option value="60">60 minutes</option>
+            </select>
+            <button class="button" onClick="createBoard()">Jouer</button>
+        </div>
+    </div>
+    <div class="chess-board">
+
+        <div id="black-pieces"></div>
+
+        <div class="square" id="num"></div>
+        <div class="square" id="num">a</div>
+        <div class="square" id="num">b</div>
+        <div class="square" id="num">c</div>
+        <div class="square" id="num">d</div>
+        <div class="square" id="num">e</div>
+        <div class="square" id="num">f</div>
+        <div class="square" id="num">g</div>
+        <div class="square" id="num">h</div>
+
+        <div class="square" id="num2">1</div>
+        <div class="square" id="1" onClick="move('1')"></div>
+        <div class="square" id="2" onClick="move('2')"></div>
+        <div class="square" id="3" onClick="move('3')"></div>
+        <div class="square" id="4" onClick="move('4')"></div>
+        <div class="square" id="5" onClick="move('5')"></div>
+        <div class="square" id="6" onClick="move('6')"></div>        
+        <div class="square" id="7" onClick="move('7')"></div>
+        <div class="square" id="8" onClick="move('8')"></div>
+
+        <div class="square" id="num2">2</div>
+        <div class="square" id="9" onClick="move('9')"></div>
+        <div class="square" id="10" onClick="move('10')"></div>
+        <div class="square" id="11" onClick="move('11')"></div>
+        <div class="square" id="12" onClick="move('12')"></div>
+        <div class="square" id="13" onClick="move('13')"></div>
+        <div class="square" id="14" onClick="move('14')"></div>        
+        <div class="square" id="15" onClick="move('15')"></div>
+        <div class="square" id="16" onClick="move('16')"></div>
+
+        <div class="square" id="num2">3</div>
+        <div class="square" id="17" onClick="move('17')"></div>
+        <div class="square" id="18" onClick="move('18')"></div>
+        <div class="square" id="19" onClick="move('19')"></div>
+        <div class="square" id="20" onClick="move('20')"></div>
+        <div class="square" id="21" onClick="move('21')"></div>
+        <div class="square" id="22" onClick="move('22')"></div>        
+        <div class="square" id="23" onClick="move('23')"></div>
+        <div class="square" id="24" onClick="move('24')"></div>
+
+        <div class="square" id="num2">4</div>
+        <div class="square" id="25" onClick="move('25')"></div>
+        <div class="square" id="26" onClick="move('25')"></div>
+        <div class="square" id="27" onClick="move('27')"></div>
+        <div class="square" id="28" onClick="move('28')"></div>
+        <div class="square" id="29" onClick="move('29')"></div>
+        <div class="square" id="30" onClick="move('30')"></div>        
+        <div class="square" id="31" onClick="move('31')"></div>
+        <div class="square" id="32" onClick="move('32')"></div>
+
+        <div class="square" id="num2">5</div>
+        <div class="square" id="33" onClick="move('33')"></div>
+        <div class="square" id="34" onClick="move('34')"></div>
+        <div class="square" id="35" onClick="move('35')"></div>
+        <div class="square" id="36" onClick="move('36')"></div>
+        <div class="square" id="37" onClick="move('37')"></div>
+        <div class="square" id="38" onClick="move('38')"></div>        
+        <div class="square" id="39" onClick="move('39')"></div>
+        <div class="square" id="40" onClick="move('40')"></div>
+
+        <div class="square" id="num2">6</div>
+        <div class="square" id="41" onClick="move('41')"></div>
+        <div class="square" id="42" onClick="move('42')"></div>
+        <div class="square" id="43" onClick="move('43')"></div>
+        <div class="square" id="44" onClick="move('44')"></div>
+        <div class="square" id="45" onClick="move('45')"></div>
+        <div class="square" id="46" onClick="move('46')"></div>        
+        <div class="square" id="47" onClick="move('47')"></div>
+        <div class="square" id="48" onClick="move('48')"></div>
+
+        <div class="square" id="num2">7</div>
+        <div class="square" id="49" onClick="move('49')"></div>
+        <div class="square" id="50" onClick="move('50')"></div>
+        <div class="square" id="51" onClick="move('51')"></div>
+        <div class="square" id="52" onClick="move('52')"></div>
+        <div class="square" id="53" onClick="move('53')"></div>
+        <div class="square" id="54" onClick="move('54')"></div>        
+        <div class="square" id="55" onClick="move('55')"></div>
+        <div class="square" id="56" onClick="move('56')"></div>
+
+        <div class="square" id="num2">8</div>
+        <div class="square" id="57" onClick="move('57')"></div>
+        <div class="square" id="58" onClick="move('58')"></div>
+        <div class="square" id="59" onClick="move('59')"></div>
+        <div class="square" id="60" onClick="move('60')"></div>
+        <div class="square" id="61" onClick="move('61')"></div>
+        <div class="square" id="62" onClick="move('62')"></div>        
+        <div class="square" id="63" onClick="move('63')"></div>
+        <div class="square" id="64" onClick="move('64')"></div>
+
+        <div id="white-pieces"></div>
+    
+        <div id="timer">
+            <div id="timer-1">5:00</div>
+            <div id="timer-2">5:00</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="checks.js"></script>
+    <script type="text/javascript">
+        createBoard();
+    </script>
+</body>
+</html>
